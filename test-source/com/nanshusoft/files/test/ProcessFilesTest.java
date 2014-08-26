@@ -19,7 +19,7 @@ public class ProcessFilesTest
         {
             Path path = Paths.get ( args[0] );
             if ( !Files.isDirectory(path) ) printUsage ( args[0] );
-            else runTest ( path );
+            runTest ( path );
         }
         catch ( InvalidPathException oops )
         {
@@ -55,10 +55,12 @@ public class ProcessFilesTest
     private static void printUsage ( )
     {
         System.err.printf ( "Usage: ProcessFilesTest [directory]" );
+        System.exit(-1);
     }
     
     private static void printUsage ( String badDirectory )
     {
         System.err.printf ( "Error: %s isn't a directory", badDirectory );
+        System.exit(-2);
     }
 }
