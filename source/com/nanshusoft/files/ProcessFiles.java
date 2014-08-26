@@ -15,7 +15,7 @@ import java.util.EnumSet;
  * return a boolean value.  
  * 
  * If the filter returns false for a given Path object,
- * that file will not be processed, and if that Path is a directory, it's
+ * that file will not be processed, and if that Path was a directory, its
  * children will also be skipped.
  * 
  * Processors are only called on individual files, never on directories.
@@ -94,7 +94,7 @@ public class ProcessFiles
     /**
      * Set the processor used during the process call.
      * @param processor the processor we'll use
-     * @return an instance to ourself that let's us chain calls
+     * @return an instance to ourself that lets us chain calls
      */
     public ProcessFiles PROCESSOR ( Processor processor )
     {
